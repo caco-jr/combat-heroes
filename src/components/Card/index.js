@@ -4,7 +4,7 @@ const Card = ({ name, imageURL, id }) => {
   return (
     <section>
       <img src={imageURL} />
-      <span>Nome: {name} </span>
+      <span>{name} </span>
     </section>
   );
 };

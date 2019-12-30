@@ -3,11 +3,13 @@ import React from 'react';
 import Header from '../../components/Header';
 import Preview from './components/Preview';
 import Card from '../../components/Card';
+import Search from './components/Search';
 
 const Home = () => (
   <>
     <Header />
     <Preview />
+    <Search />
     {[...Array(6)].map((item, index) => (
       <Card
         key={index}
