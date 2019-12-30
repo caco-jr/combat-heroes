@@ -1,5 +1,5 @@
 {
-  "name": "with-jest",
+  "name": "combat-heroes",
   "version": "1.0.0",
   "dependencies": {
     "next": "9.1.6",
