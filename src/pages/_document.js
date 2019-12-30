@@ -43,6 +43,13 @@ export default class MyDocument extends Document {
 
           <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+          <link href="/static/style/style.css" rel="stylesheet" />
+
+          <link
+            href="https://fonts.googleapis.com/css?family=DM+Sans:400,700&display=swap&subset=latin-ext"
+            rel="stylesheet"
+          />
+
           <link
             href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css"
             rel="stylesheet"
