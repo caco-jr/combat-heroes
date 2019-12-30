@@ -1,16 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
-import Header from '../../components/Header';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
+import Header from '../../components/Header';
+import Preview from './components/Preview';
+import Card from '../../components/Card';
 
 const Home = () => (
   <>
     <Header />
-    <Title>Hello World!</Title>
+    <Preview />
+    {[...Array(6)].map((item, index) => (
+      <Card
+        key={index}
+        id="70"
+        name="Batman"
+        imageURL="https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"
+      />
+    ))}
   </>
 );
 
