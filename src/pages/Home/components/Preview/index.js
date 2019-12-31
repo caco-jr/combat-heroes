@@ -1,9 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import { PreviewWrapper, PreviewBackground } from './index.style';
 import PreviewSlot from './components/Slot';
 
-const Preview = () => {
-  const slots = [
+const Preview = ({ slots }) => {
+  console.log('==>', slots);
+
+  const slotsA = [
     {
       response: 'success',
       id: '70',
@@ -88,7 +92,7 @@ const Preview = () => {
   return (
     <PreviewBackground>
       <PreviewWrapper className="container">
-        {slots.map(item => (
+        {slotsA.map(item => (
           <PreviewSlot
             key={item.id}
             name={item.name}
@@ -101,4 +105,6 @@ const Preview = () => {
   );
 };
 
-export default Preview;
+const mapStateToProps = ({ slots }) => ({ slots });
+
+export default connect(mapStateToProps)(Preview);
