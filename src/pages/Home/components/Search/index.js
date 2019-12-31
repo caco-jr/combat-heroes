@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { SearchWrapper, SearchInput } from './index.style';
+
 const Search = () => {
   return (
-    <form>
-      <input name="search" />
-    </form>
+    <SearchWrapper>
+      <SearchInput name="search" />
+    </SearchWrapper>
   );
 };
 

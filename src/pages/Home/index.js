@@ -10,7 +10,10 @@ const Home = () => (
   <>
     <Header />
     <Preview />
-    <Search />
+    <section className="container">
+      <Search />
+    </section>
+
     <CardList className="container">
       {[...Array(6)].map((item, index) => (
         <Card
