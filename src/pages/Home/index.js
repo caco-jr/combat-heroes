@@ -14,6 +14,7 @@ const Home = () => (
       <Search />
     </section>
 
+    <h2>Most Popular</h2>
     <CardList className="container">
       {[...Array(6)].map((item, index) => (
         <Card
