@@ -1,6 +1,6 @@
 import React from 'react';
 import { PreviewWrapper } from './index.style';
-import PreviewSlot from './Slot';
+import PreviewSlot from './components/Slot';
 
 const Preview = () => {
   const slots = [
