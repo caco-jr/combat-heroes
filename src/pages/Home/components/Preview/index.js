@@ -1,5 +1,5 @@
 import React from 'react';
-import { PreviewWrapper } from './index.style';
+import { PreviewWrapper, PreviewBackground } from './index.style';
 import PreviewSlot from './components/Slot';
 
 const Preview = () => {
@@ -86,16 +86,18 @@ const Preview = () => {
   ];
 
   return (
-    <PreviewWrapper>
-      {slots.map(item => (
-        <PreviewSlot
-          key={item.id}
-          name={item.name}
-          biography={item.biography}
-          image={item.image}
-        />
-      ))}
-    </PreviewWrapper>
+    <PreviewBackground>
+      <PreviewWrapper className="container">
+        {slots.map(item => (
+          <PreviewSlot
+            key={item.id}
+            name={item.name}
+            biography={item.biography}
+            image={item.image}
+          />
+        ))}
+      </PreviewWrapper>
+    </PreviewBackground>
   );
 };
 

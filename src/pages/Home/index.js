@@ -10,21 +10,23 @@ const Home = () => (
   <>
     <Header />
     <Preview />
+
     <section className="container">
       <Search />
-    </section>
 
-    <h2>Most Popular</h2>
-    <CardList className="container">
-      {[...Array(6)].map((item, index) => (
-        <Card
-          key={index}
-          id="70"
-          name="Batman"
-          imageURL="https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"
-        />
-      ))}
-    </CardList>
+      <h2>Most Popular</h2>
+
+      <CardList>
+        {[...Array(6)].map((item, index) => (
+          <Card
+            key={index}
+            id="70"
+            name="Batman"
+            imageURL="https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"
+          />
+        ))}
+      </CardList>
+    </section>
   </>
 );
 
