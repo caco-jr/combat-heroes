@@ -1,12 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const Card = ({ name, imageURL, id }) => {
+import { addToSlot } from '../../../redux/actions/slot';
+
+const Card = ({ name, imageURL, id, slot, addToSlot }) => {
   return (
     <section>
-      <img src={imageURL} />
+      <button type="button" onClick={() => addToSlot('playerOne', { id })}>
+        <img src={imageURL} />
+      </button>
+
       <span>{name} </span>
     </section>
   );
 };
 
-export default Card;
+function mapStateToProps({ slot }) {
+  return { slot };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addToSlot: (who, object) => dispatch(addToSlot(who, object))
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Card);
