@@ -45,7 +45,7 @@ const Preview = () => {
           'Damian Wayne (son), Dick Grayson (adopted son), Tim Drake (adopted son), Jason Todd (adopted son), Cassandra Cain (adopted ward)\nMartha Wayne (mother, deceased), Thomas Wayne (father, deceased), Alfred Pennyworth (former guardian), Roderick Kane (grandfather, deceased), Elizabeth Kane (grandmother, deceased), Nathan Kane (uncle, deceased), Simon Hurt (ancestor), Wayne Family'
       },
       image: {
-        url: 'httpss://www.superherodb.com/pictures2/portraits/10/100/639.jpg'
+        url: 'https://www.superherodb.com/pictures2/portraits/10/100/639.jpg'
       }
     },
     {
@@ -84,10 +84,16 @@ const Preview = () => {
       }
     }
   ];
+
   return (
     <PreviewWrapper>
       {slots.map(item => (
-        <PreviewSlot key={item.id} name={item.name} />
+        <PreviewSlot
+          key={item.id}
+          name={item.name}
+          biography={item.biography}
+          image={item.image}
+        />
       ))}
     </PreviewWrapper>
   );
