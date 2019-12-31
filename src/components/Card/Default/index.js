@@ -3,33 +3,31 @@ import { connect } from 'react-redux';
 
 import { addToSlot } from '../../../redux/actions/slot';
 
-const Card = ({ name, imageURL, id, slot, addToSlot }) => {
+const Card = ({ name, imageURL, id, slots, addToSlot }) => {
+  const isSelected = () => Object.values(slots).some(item => item.id === id);
+
   return (
     <section>
       <img src={imageURL} />
-      <button
-        type="button"
-        onClick={() => addToSlot('playerOne', { id })}
-        disabled={slot.playerTwo.id === id}
-      >
-        A
-      </button>
 
-      <button
-        type="button"
-        onClick={() => addToSlot('playerTwo', { id })}
-        disabled={slot.playerOne.id === id}
-      >
-        B
-      </button>
+      {Object.keys(slots).map(item => (
+        <button
+          key={item}
+          type="button"
+          onClick={() => addToSlot(item, { id })}
+          disabled={isSelected()}
+        >
+          {item}
+        </button>
+      ))}
 
       <p>{name} </p>
     </section>
   );
 };
 
-function mapStateToProps({ slot }) {
-  return { slot };
+function mapStateToProps({ slots }) {
+  return { slots };
 }
 
 function mapDispatchToProps(dispatch) {
