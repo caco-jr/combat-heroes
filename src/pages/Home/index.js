@@ -11,7 +11,7 @@ const Home = () => (
     <Header />
     <Preview />
     <Search />
-    <CardList>
+    <CardList className="container">
       {[...Array(6)].map((item, index) => (
         <Card
           key={index}
