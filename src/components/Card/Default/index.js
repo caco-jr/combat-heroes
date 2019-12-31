@@ -6,11 +6,24 @@ import { addToSlot } from '../../../redux/actions/slot';
 const Card = ({ name, imageURL, id, slot, addToSlot }) => {
   return (
     <section>
-      <button type="button" onClick={() => addToSlot('playerOne', { id })}>
-        <img src={imageURL} />
+      <img src={imageURL} />
+      <button
+        type="button"
+        onClick={() => addToSlot('playerOne', { id })}
+        disabled={slot.playerTwo.id === id}
+      >
+        A
       </button>
 
-      <span>{name} </span>
+      <button
+        type="button"
+        onClick={() => addToSlot('playerTwo', { id })}
+        disabled={slot.playerOne.id === id}
+      >
+        B
+      </button>
+
+      <p>{name} </p>
     </section>
   );
 };
