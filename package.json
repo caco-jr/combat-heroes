@@ -2,7 +2,8 @@
   "name": "combat-heroes",
   "version": "1.0.0",
   "dependencies": {
-    "axios": "^0.19.0",
+    "apollo-datasource-rest": "^0.6.11",
+    "apollo-server-micro": "^2.9.15",
     "next": "9.1.6",
     "next-redux-wrapper": "^4.0.1",
     "react": "16.12.0",
