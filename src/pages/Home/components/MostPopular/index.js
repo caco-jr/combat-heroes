@@ -3,20 +3,17 @@ import React from 'react';
 import { CardList } from '../../../../components/Card/List/index.style';
 import Card from '../../../../components/Card/Default';
 
-const MostPopular = () => {
+const MostPopular = ({ data }) => {
   return (
     <section className="container">
       <h2>Most Popular</h2>
 
       <CardList>
-        {[...Array(6)].map((item, index) => (
-          <Card
-            key={index}
-            id={`${index + 1}`}
-            name="Batman"
-            imageURL="https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"
-          />
-        ))}
+        {data.map((item, index) => {
+          const { id, name, image } = item.data.character;
+
+          return <Card key={index} id={id} name={name} imageURL={image.url} />;
+        })}
       </CardList>
     </section>
   );

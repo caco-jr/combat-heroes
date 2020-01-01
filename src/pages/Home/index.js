@@ -6,7 +6,7 @@ import Preview from './components/Preview';
 import Search from './components/Search';
 import MostPopular from './components/MostPopular';
 
-const Home = () => (
+const Home = ({ mostPopular }) => (
   <>
     <Header />
     <Preview />
@@ -15,12 +15,12 @@ const Home = () => (
       <Search />
     </section>
 
-    <MostPopular />
+    <MostPopular data={mostPopular} />
   </>
 );
 
 Home.getInitialProps = async () => {
-  const ids = [34, 20, 49, 32, 42];
+  const ids = [208, 620, 644, 213, 310, 289, 322, 413];
   const query = `
     {
       id
