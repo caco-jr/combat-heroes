@@ -11,6 +11,8 @@ const characterSchema = gql`
     powerstats: PowerStats
     biography: Biography
     work: Work
+    appearance: Appearance
+    connections: Connections
     image: Image
   }
 
@@ -24,12 +26,32 @@ const characterSchema = gql`
   }
 
   type Biography {
+    fullName: String
+    alterEgos: String
+    aliases: [String]
+    placeOfBirth: String
+    firstAppearance: String
+    publisher: String
     alignment: String
+  }
+
+  type Appearance {
+    gender: String
+    race: String
+    height: [String]
+    weight: [String]
+    eyeColor: String
+    hairColor: String
   }
 
   type Work {
     occupation: String
     base: String
+  }
+
+  type Connections {
+    groupAffiliation: String
+    relatives: String
   }
 
   type Image {
