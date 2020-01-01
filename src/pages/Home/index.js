@@ -20,7 +20,7 @@ const Home = () => (
         {[...Array(6)].map((item, index) => (
           <Card
             key={index}
-            id={index + 1}
+            id={`${index + 1}`}
             name="Batman"
             imageURL="https://www.superherodb.com/pictures2/portraits/10/100/639.jpg"
           />

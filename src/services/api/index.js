@@ -1,6 +1,11 @@
-const accessToken = '2542540742509147';
-
-const api = `https://superheroapi.com/api/${accessToken}`;
-
-export const getCharacterAPI = id =>
-  fetch(`${api}/${id}`).then(res => res.json());
+export const getCharacterAPI = (id, fieldsString) =>
+  fetch('/api/graphql', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
+    },
+    body: JSON.stringify({
+      query: `{character(id: ${id})${fieldsString}}`
+    })
+  }).then(res => res.json());
