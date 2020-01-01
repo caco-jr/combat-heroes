@@ -32,11 +32,8 @@ Home.getInitialProps = async () => {
   `;
 
   const res = await Promise.all(ids.map(item => getCharacterAPI(item, query)));
-  // const res = await getCharacterAPI(34, query);
 
-  console.log('Olaaa', res);
-
-  return { mostPopular: 'Teste' };
+  return { mostPopular: res };
 };
 
 export default Home;
