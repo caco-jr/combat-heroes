@@ -20,7 +20,7 @@ const Home = ({ mostPopular }) => (
 );
 
 Home.getInitialProps = async () => {
-  const ids = [208, 632, 620, 644, 213, 310, 720, 579, 289, 322, 413, 485];
+  const ids = [208, 720, 620, 644, 213, 310, 579, 289, 322, 632, 413, 485];
   const query = `
     {
       id
