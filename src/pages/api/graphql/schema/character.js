@@ -8,10 +8,31 @@ const characterSchema = gql`
   type Character {
     id: String
     name: String
-    image: CharacterImage
+    powerstats: PowerStats
+    biography: Biography
+    work: Work
+    image: Image
   }
 
-  type CharacterImage {
+  type PowerStats {
+    intelligence: String
+    strength: String
+    speed: String
+    durability: String
+    power: String
+    combat: String
+  }
+
+  type Biography {
+    alignment: String
+  }
+
+  type Work {
+    occupation: String
+    base: String
+  }
+
+  type Image {
     url: String
   }
 `;
