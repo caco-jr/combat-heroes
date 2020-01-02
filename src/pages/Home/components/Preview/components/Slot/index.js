@@ -1,12 +1,15 @@
 import React from 'react';
 
 import { PreviewSlotWrapper } from './index.style';
+import PreviewRandom from '../Random';
 
 const PreviewSlot = props => {
   const { name, biography, image } = props;
 
   return (
     <PreviewSlotWrapper>
+      <PreviewRandom />
+
       {Object.values(props).length ? (
         <>
           <img src={image.url} />
