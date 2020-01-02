@@ -10,7 +10,7 @@ const MostPopular = ({ data }) => {
 
       <CardList>
         {data.map((item, index) => {
-          const { id, name, image } = item.data.character;
+          const { id, name, image } = item;
 
           return <Card key={index} id={id} name={name} imageURL={image.url} />;
         })}

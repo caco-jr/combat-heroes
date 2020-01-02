@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getCharacterAPI } from '../../services/api';
+import { getCharactersAPI } from '../../services/api';
 import Header from '../../components/Header';
 import Preview from './components/Preview';
 import Search from './components/Search';
@@ -31,9 +31,9 @@ Home.getInitialProps = async () => {
     }
   `;
 
-  const res = await Promise.all(ids.map(item => getCharacterAPI(item, query)));
+  const res = await getCharactersAPI(ids, query);
 
-  return { mostPopular: res };
+  return { mostPopular: res.data.characters };
 };
 
 export default Home;

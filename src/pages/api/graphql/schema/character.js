@@ -3,6 +3,7 @@ import { gql } from 'apollo-server-core';
 const characterSchema = gql`
   extend type Query {
     character(id: ID!): Character
+    characters(ids: [ID!]): [Character]
   }
 
   type Character {

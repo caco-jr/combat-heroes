@@ -17,3 +17,12 @@ export const getCharacterAPI = (id, fieldsString) =>
       query: `{character(id: ${id})${fieldsString}}`
     })
   }).then(res => res.json());
+
+export const getCharactersAPI = (ids, fieldsString) =>
+  fetch(api, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({
+      query: `{characters(ids: [${ids}])${fieldsString}}`
+    })
+  }).then(res => res.json());
