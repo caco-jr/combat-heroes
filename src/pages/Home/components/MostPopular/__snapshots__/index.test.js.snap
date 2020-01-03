@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing Rendering MostPopular 1`] = `
+<section
+  className="container"
+>
+  <h2>
+    Most Popular
+  </h2>
+  <section
+    className="indexstyle__CardList-sc-5v81d9-0 eIwYVw"
+  />
+</section>
+`;

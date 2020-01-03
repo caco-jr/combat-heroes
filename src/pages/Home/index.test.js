@@ -15,7 +15,11 @@ import makeStore from '../../redux';
 // });
 
 describe('With Snapshot Testing', () => {
-  it('App shows "Hello world!"', () => {
+  beforeAll(() => {
+    global.fetch = jest.fn();
+  });
+
+  it('Rendering Home Page', () => {
     const component = renderer.create(
       <Provider store={makeStore()}>
         <Home />
