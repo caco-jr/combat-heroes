@@ -4,13 +4,13 @@ import { PreviewSlotWrapper } from './index.style';
 import PreviewRandom from '../Random';
 
 const PreviewSlot = props => {
-  const { name, biography, image } = props;
+  const { name, biography, image, slotName } = props;
 
   return (
     <PreviewSlotWrapper>
-      <PreviewRandom />
+      <PreviewRandom slotName={slotName} />
 
-      {Object.values(props).length ? (
+      {name ? (
         <>
           <img src={image.url} />
           <p>

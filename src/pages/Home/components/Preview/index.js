@@ -8,8 +8,8 @@ const Preview = ({ slots }) => {
   return (
     <PreviewBackground>
       <PreviewWrapper className="container">
-        {Object.values(slots).map((item, index) => (
-          <PreviewSlot key={index} {...item} />
+        {Object.entries(slots).map((item, index) => (
+          <PreviewSlot key={index} {...item[1]} slotName={item[0]} />
         ))}
       </PreviewWrapper>
     </PreviewBackground>

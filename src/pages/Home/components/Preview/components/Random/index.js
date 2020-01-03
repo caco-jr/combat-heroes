@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { addToSlot } from '../../../../../../redux/actions/slot';
 import { randomIntFromInterval, LAST_ID } from '../../../../../../helpers';
 
-const PreviewRandom = ({ addToSlot }) => {
+const PreviewRandom = ({ addToSlot, slotName }) => {
   const handleRandom = () => {
-    addToSlot('playerOne', { id: randomIntFromInterval(1, LAST_ID) });
+    addToSlot(slotName, { id: randomIntFromInterval(1, LAST_ID) });
   };
 
   return (
