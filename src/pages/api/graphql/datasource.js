@@ -2,8 +2,7 @@ import { RESTDataSource } from 'apollo-datasource-rest';
 import { camelCased } from '../../../helpers';
 
 export class SuperHeroAPI extends RESTDataSource {
-  _accessToken = '2542540742509147';
-  api = `https://superheroapi.com/api/${this._accessToken}`;
+  api = `https://superheroapi.com/api/${process.env.ACCESS_TOKEN}`;
 
   async getCharacterAPI(id) {
     const result = await this.get(`${this.api}/${id}`, null, {
