@@ -25,9 +25,11 @@
     "react-test-renderer": "16.12.0"
   },
   "scripts": {
-    "test": "jest",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll --verbose",
+    "test:coverage": "jest --verbose --coverage"
   }
 }
