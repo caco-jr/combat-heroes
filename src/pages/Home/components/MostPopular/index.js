@@ -9,11 +9,14 @@ const MostPopular = ({ data }) => {
       <h2>Most Popular</h2>
 
       <CardList>
-        {data.map((item, index) => {
-          const { id, name, image } = item;
+        {data &&
+          data.map((item, index) => {
+            const { id, name, image } = item;
 
-          return <Card key={index} id={id} name={name} imageURL={image.url} />;
-        })}
+            return (
+              <Card key={index} id={id} name={name} imageURL={image.url} />
+            );
+          })}
       </CardList>
     </section>
   );
