@@ -1,12 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`With Snapshot Testing Rendering Search 1`] = `
+.c0 {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
 <form
-  className="indexstyle__SearchWrapper-sc-1r0ek5c-0 hEclBY"
+  className=""
+  onSubmit={[Function]}
 >
   <input
-    className="indexstyle__SearchInput-sc-1r0ek5c-1 eJzVLt"
+    className="c0"
     name="search"
+    onChange={[Function]}
+    value=""
   />
 </form>
 `;

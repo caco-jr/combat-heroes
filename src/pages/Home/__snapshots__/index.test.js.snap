@@ -40,10 +40,13 @@ Array [
   >
     <form
       className="indexstyle__SearchWrapper-sc-1r0ek5c-0 hEclBY"
+      onSubmit={[Function]}
     >
       <input
         className="indexstyle__SearchInput-sc-1r0ek5c-1 eJzVLt"
         name="search"
+        onChange={[Function]}
+        value=""
       />
     </form>
   </section>,
