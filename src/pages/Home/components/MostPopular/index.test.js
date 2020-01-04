@@ -2,8 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
-import Card from '../../../../components/Card/Default';
 
+import Card from '../../../../components/Card/Default';
 import MostPopular from './index';
 
 const mockCharacterObject = {
