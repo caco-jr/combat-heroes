@@ -11,7 +11,7 @@ const PreviewSlot = props => {
       <PreviewRandom slotName={slotName} />
 
       {name ? (
-        <>
+        <section className="c-preview-slot">
           <img src={image.url} />
           <p>
             <span>Secret identity: </span>
@@ -27,7 +27,7 @@ const PreviewSlot = props => {
             <span>Birth In: </span>
             {biography.placeOfBirth}
           </p>
-        </>
+        </section>
       ) : null}
     </PreviewSlotWrapper>
   );
