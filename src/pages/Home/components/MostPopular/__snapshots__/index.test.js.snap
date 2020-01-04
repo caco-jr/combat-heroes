@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`With Enzyme renders 1`] = `ShallowWrapper {}`;
+
+exports[`With Enzyme should return the default empty array when there is no data to map through 1`] = `ShallowWrapper {}`;
+
 exports[`With Snapshot Testing Rendering MostPopular 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  gap: 30px 20px;
+}
+
+@media (max-width:360px) {
+  .c0 {
+    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+  }
+}
+
 <section
   className="container"
 >
@@ -8,7 +24,7 @@ exports[`With Snapshot Testing Rendering MostPopular 1`] = `
     Most Popular
   </h2>
   <section
-    className="indexstyle__CardList-sc-5v81d9-0 eIwYVw"
+    className="c0"
   />
 </section>
 `;
