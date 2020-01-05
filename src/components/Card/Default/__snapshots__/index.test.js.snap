@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Enzyme renders 1`] = `ShallowWrapper {}`;
+
+exports[`With Snapshot Testing Rendering Preview 1`] = `
+<section>
+  <img />
+  <button
+    disabled={true}
+    onClick={[Function]}
+    type="button"
+  >
+    playerOne
+  </button>
+  <button
+    disabled={true}
+    onClick={[Function]}
+    type="button"
+  >
+    playerTwo
+  </button>
+  <h3
+    className=""
+  />
+</section>
+`;

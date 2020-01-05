@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { addToSlot } from '../../../redux/actions/slot';
+import { CardTitle } from './index.style';
 
 const Card = ({ name, imageURL, id, slots, addToSlot }) => {
   const isSelected = () => Object.values(slots).some(item => item.id === id);
@@ -21,7 +22,7 @@ const Card = ({ name, imageURL, id, slots, addToSlot }) => {
         </button>
       ))}
 
-      <p>{name} </p>
+      <CardTitle>{name}</CardTitle>
     </section>
   );
 };
