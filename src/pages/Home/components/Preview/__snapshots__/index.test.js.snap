@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Enzyme renders 1`] = `ShallowWrapper {}`;
+
+exports[`With Snapshot Testing Rendering Preview 1`] = `
+.c0 {
+  background: linear-gradient( 90deg,var(--secondary-color) 50%,var(--primary-color) 50% );
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 section {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 400px;
+  padding: 30px;
+}
+
+<section
+  className="c0"
+>
+  <section
+    className="c1 container"
+  >
+    <section
+      className=""
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Aleatório
+      </button>
+    </section>
+    <section
+      className=""
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Aleatório
+      </button>
+    </section>
+  </section>
+</section>
+`;

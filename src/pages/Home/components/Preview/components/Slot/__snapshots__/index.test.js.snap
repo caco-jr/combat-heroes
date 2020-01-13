@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Enzyme renders 1`] = `ReactWrapper {}`;
+
+exports[`With Enzyme should return the default empty block when there is no data 1`] = `ShallowWrapper {}`;
+
+exports[`With Snapshot Testing Rendering Preview 1`] = `
+<section
+  className=""
+>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Aleatório
+  </button>
+</section>
+`;

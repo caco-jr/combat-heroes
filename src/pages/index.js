@@ -1,10 +1,3 @@
-export default () => (
-  <div>
-    <style jsx>{`
-      p {
-        color: red;
-      }
-    `}</style>
-    <p>Hello World!</p>
-  </div>
-)
+import Home from './Home';
+
+export default Home;

@@ -1,21 +1,18 @@
-import React from 'react'
-import { shallow } from 'enzyme'
-import renderer from 'react-test-renderer'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
 
-import App from '../pages/index'
-
-describe('With Enzyme', () => {
-  it('App shows "Hello world!"', () => {
-    const app = shallow(<App />)
-
-    expect(app.find('p').text()).toEqual('Hello World!')
-  })
-})
+import App from '../pages/index';
+import makeStore from '../redux';
 
 describe('With Snapshot Testing', () => {
   it('App shows "Hello world!"', () => {
-    const component = renderer.create(<App />)
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-})
+    const component = renderer.create(
+      <Provider store={makeStore()}>
+        <App />
+      </Provider>
+    );
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
