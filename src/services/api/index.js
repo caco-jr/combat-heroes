@@ -1,6 +1,9 @@
 import fetch from 'isomorphic-unfetch';
 
-const url = 'http://localhost:3000';
+const url =
+  process.env.NODE_ENV !== 'production'
+    ? 'http://localhost:3000'
+    : 'combat-heroes.now.sh';
 
 const api = `${url}/api/graphql`;
 
