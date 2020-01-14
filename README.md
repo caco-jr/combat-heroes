@@ -1,25 +1,18 @@
-# Example app with Jest tests
+# Combat Heroes
 
 ## How to use
 
-### Using `create-next-app`
+## Init
 
-Execute [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
+Create `.env` file in project root with the access token variable, example:
 
-```bash
-npx create-next-app --example with-jest with-jest-app
-# or
-yarn create next-app --example with-jest with-jest-app
+```
+ACCESS_TOKEN="25443540742509142"
 ```
 
-### Download manually
+You can get the access token on  [`Super Heroes API`](https://superheroapi.com/)
 
-Download the example:
-
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-jest
-cd with-jest
-```
+### Using `combat-heroes`
 
 Install it and run:
 
@@ -37,10 +30,14 @@ yarn dev
 npm run test
 # or
 yarn test
+# or (with coverage)
+yarn test:coverage
 ```
 
-## The idea behind the example
+## The idea behind the Combat Heroes
 
-This example features:
+This project features:
 
 - An app with jest tests
+- Redux control
+- GraphQL on API
