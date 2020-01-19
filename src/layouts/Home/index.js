@@ -7,7 +7,7 @@ import Search from './components/Search';
 import MostPopular from './components/MostPopular';
 
 const Home = ({ mostPopular }) => (
-  <section data-theme="dark">
+  <section data-theme="light">
     <Header />
     <Preview />
 
