@@ -8,14 +8,15 @@
   --darker-blue: #0a0818;
   --green: #0ad0b5;
   --pink: #d83f87;
-  --red: #fb5050;
+  --red: #d21437;
   --dark-red: #d93232;
   --purple: #2a2356;
   --dark-purple: #201a41;
+  --yellow: #d7b529;
   /* // ------------------------- */
   /* // --- Brand colors */
-  --primary-color: var(--green);
-  --secondary-color: #6b4dc4;
+  --primary-color: var(--red);
+  --secondary-color: var(--green);
   /* // ------------------------- */
   /* // --- Status color */
   --error-color: var(--pink);
@@ -25,7 +26,7 @@
   --border-radius: 10px;
   /* // ------------------------- */
   /* // --- Others */
-  --background-color: var(--darker-blue);
+  --background-color: #1d1e26;
   --text-color: #fff;
   --title-color: #fff;
   /* // ------------------------- */

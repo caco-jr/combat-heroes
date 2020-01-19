@@ -7,7 +7,7 @@ import Search from './components/Search';
 import MostPopular from './components/MostPopular';
 
 const Home = ({ mostPopular }) => (
-  <>
+  <section data-theme="dark">
     <Header />
     <Preview />
 
@@ -16,7 +16,7 @@ const Home = ({ mostPopular }) => (
     </section>
 
     <MostPopular data={mostPopular} />
-  </>
+  </section>
 );
 
 Home.getInitialProps = async ({ res }) => {
