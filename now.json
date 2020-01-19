@@ -17,11 +17,11 @@
     }
   ],
   "env": {
-    "ACCESS_TOKEN": "@access-token"
+    "ACCESS_TOKEN": "@ch-access-token"
   },
   "build": {
     "env": {
-      "ACCESS_TOKEN": "@access-token"
+      "ACCESS_TOKEN": "@ch-access-token"
     }
   }
 }
