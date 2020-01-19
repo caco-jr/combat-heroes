@@ -19,7 +19,16 @@ const Home = ({ mostPopular }) => (
   </>
 );
 
-Home.getInitialProps = async () => {
+Home.getInitialProps = async ({ res }) => {
+  if (res) {
+    const TIME_SECONDS = 60 * 60 * 24 * 7;
+
+    res.setHeader(
+      'Cache-Control',
+      `s-maxage=${TIME_SECONDS}, stale-while-revalidate`
+    );
+  }
+
   const ids = [208, 720, 620, 644, 213, 310, 579, 289, 322, 632, 413, 485];
   const query = `
     {
@@ -31,9 +40,9 @@ Home.getInitialProps = async () => {
     }
   `;
 
-  const res = await getCharactersAPI(ids, query);
+  const apiResponse = await getCharactersAPI(ids, query);
 
-  return { mostPopular: res.data.characters };
+  return { mostPopular: apiResponse.data.characters };
 };
 
 export default Home;
