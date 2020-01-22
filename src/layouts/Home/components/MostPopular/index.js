@@ -15,7 +15,12 @@ const MostPopular = ({ data }) => {
             const { id, name, image } = item;
 
             return (
-              <Card key={index} id={id} name={name} imageURL={image.url} />
+              <Card
+                key={index}
+                id={id}
+                name={name}
+                imageURL={image ? image.url : ''}
+              />
             );
           })}
       </CardList>

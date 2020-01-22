@@ -42,10 +42,6 @@ Home.getInitialProps = async ({ res }) => {
 
   const apiResponse = await getCharactersAPI(ids, query);
 
-  console.log('====================================');
-  console.log(apiResponse);
-  console.log('====================================');
-
   return { mostPopular: apiResponse.data.characters };
 };
 
