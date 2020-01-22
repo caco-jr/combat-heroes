@@ -2,28 +2,31 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { addToSlot } from '../../../redux/actions/slot';
-import { CardTitle } from './index.style';
+import { CardTitle, CardWrapper, CardMask, CardContent } from './index.style';
 
 const Card = ({ name, imageURL, id, slots, addToSlot }) => {
   const isSelected = () => Object.values(slots).some(item => item.id === id);
 
   return (
-    <section>
+    <CardWrapper>
       <img src={imageURL} />
+      <CardContent>
+        {Object.keys(slots).map(item => (
+          <button
+            key={item}
+            type="button"
+            onClick={() => addToSlot(item, { id })}
+            disabled={isSelected()}
+          >
+            {item}
+          </button>
+        ))}
 
-      {Object.keys(slots).map(item => (
-        <button
-          key={item}
-          type="button"
-          onClick={() => addToSlot(item, { id })}
-          disabled={isSelected()}
-        >
-          {item}
-        </button>
-      ))}
+        <CardTitle>{name}</CardTitle>
+      </CardContent>
 
-      <CardTitle>{name}</CardTitle>
-    </section>
+      <CardMask />
+    </CardWrapper>
   );
 };
 

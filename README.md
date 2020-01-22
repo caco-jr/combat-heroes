@@ -41,3 +41,6 @@ This project features:
 - An app with jest tests
 - Redux control
 - GraphQL on API
+- Server Side Rendering with NextJS
+- Serverless
+- CI / CD

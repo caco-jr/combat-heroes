@@ -1,12 +1,13 @@
 import React from 'react';
 
+import { SectionTitle } from '../../../../components/Title/index.style';
 import { CardList } from '../../../../components/Card/List/index.style';
 import Card from '../../../../components/Card/Default';
 
 const MostPopular = ({ data }) => {
   return (
     <section className="container">
-      <h2>Most Popular</h2>
+      <SectionTitle>Most Popular</SectionTitle>
 
       <CardList>
         {data &&
