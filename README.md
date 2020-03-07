@@ -7,7 +7,7 @@
 Create `.env` file in project root with the access token variable, example:
 
 ```
-ACCESS_TOKEN="25443540742509142"
+ACCESS_TOKEN="00000000000000"
 ```
 
 You can get the access token on  [`Super Heroes API`](https://superheroapi.com/)
